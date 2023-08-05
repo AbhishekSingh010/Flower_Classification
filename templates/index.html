@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+body{
+    background-color: rgb(132, 132, 162);
+}
+form{
+    max-width: 50%;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+    <form action="{{url_for('predict')}}" 
+    method="post">
+<input type="text" name="Sepal_Length" placeholder="Sepal_Length" required="required">
+
+<input type="text" name="Sepal_Width" placeholder="Sepal_Width" required="required">
+<input type="text" name="Petal_Length" placeholder="Petal_Length" required="required">
+<input type="text" name="Petal_Width" placeholder="Petal_Width" required="required">
+
+<br>
+<br>
+<button type="submit">predict</button>
+
+</form>
+    <br><br>
+    {{ prediction_text }}
+</body>
+</html>
